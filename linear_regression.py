@@ -12,4 +12,4 @@ class linear_regression():
     def train(self):
         X = self.X
         y = self.y
-        self.b_hat = np.dot(np.linalg.inv(np.dot(X.T, X)), np.dot(X.T, y))
+        self.b_hat = np.linalg.inv(X.T @ X) @ X.T @ y
