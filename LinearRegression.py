@@ -1,5 +1,5 @@
 import numpy as np
-import scipy as sp
+from scipy import linalg as sp_linalg
 
 class LinearRegression(): 
     """A linear regression class which takes in an X and y input, and calculates  
@@ -21,7 +21,7 @@ class LinearRegression():
         # QR decomposition of X
         Q, R = np.linalg.qr(self.X, mode='reduced')
         # Solve Rb_hat = Q.Ty via backsubstitution (should be very fast)
-        self.b_hat = sp.linalg.solve_triangular(R, Q.T @ self.y)
+        self.b_hat = sp_linalg.solve_triangular(R, Q.T @ self.y)
 
     def __str__(self):
         # Print out the first 7 columns and the coefficients 
