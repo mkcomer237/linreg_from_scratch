@@ -8,11 +8,19 @@ class LinearRegression():
     It takes in an X and y input, and calculates  
     the least squares coefficients and other model statistics."""
 
-    def __init__(self, X, y): 
-        """Initialize the class with X and y datasets."""
+    def __init__(self, X, y, prepend_ones=False): 
+        """Initialize the class with X and y datasets.
+        
+        Prepend a column of ones if requested"""
         self.X = X 
         self.y = y
-        self.n = X.shape[1]
+        self.n = X.shape[0]
+
+        if prepend_ones:
+            ones = np.ones((self.n, 1))
+            print(ones)
+            self.X = np.concatenate((ones, self.X), axis=1)
+            print(self.X)
     
     def train(self):
         """Simple training using the normal equations.

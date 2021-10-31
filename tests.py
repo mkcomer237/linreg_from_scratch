@@ -31,7 +31,7 @@ print('b_hat shape: ', reg.b_hat.shape)
 # Generate a large random dataset to test speed
 print('\nLarge random data example to test speed')
 
-obs = 1000
+obs = 10000
 
 x0 = [1 for i in range(obs)]
 x1 = list(range(obs))
