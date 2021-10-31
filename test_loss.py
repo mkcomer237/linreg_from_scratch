@@ -1,3 +1,6 @@
+"""Smaller set of tests for gradient descent."""
+
+
 from GDHelperFunctions import MSE, MSEGradient
 from LinearRegression import LinearRegression
 import numpy as np

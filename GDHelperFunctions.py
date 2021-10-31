@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings("error")
 
 def MSE(X, y, b_hat):
-    """return y_hat and mean squared error in a tuple."""
+    """Return y_hat and mean squared error in a tuple."""
     y_hat = X @ b_hat
     e = y - y_hat
     try:
@@ -16,6 +16,6 @@ def MSE(X, y, b_hat):
     return (y_hat, mse)
 
 def MSEGradient(X, y, y_hat):
-    """Find the array of derivatives for MSE wrt b_hat"""
+    """Find the array of derivatives for MSE wrt b_hat."""
     e = y - y_hat
     return -2*(X.T @ e)/len(y)
