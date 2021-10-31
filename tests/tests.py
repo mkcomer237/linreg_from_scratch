@@ -1,5 +1,8 @@
 """Script to test the various training methods on data."""
 
+
+import sys
+sys.path.append('/Users/maxcomer/Dropbox/Python Deep Learning/linear_regression/linear_regression_github') #noqa
 from  LinearRegression import LinearRegression
 import numpy as np
 from numpy.random import normal
@@ -31,7 +34,7 @@ print('b_hat shape: ', reg.b_hat.shape)
 # Generate a large random dataset to test speed
 print('\nLarge random data example to test speed')
 
-obs = 10000
+obs = 1000
 
 x0 = [1 for i in range(obs)]
 x1 = list(range(obs))

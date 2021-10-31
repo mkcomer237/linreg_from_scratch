@@ -1,10 +1,11 @@
 """Smaller set of tests for gradient descent."""
 
-
+import sys
+sys.path.append('/Users/maxcomer/Dropbox/Python Deep Learning/linear_regression/linear_regression_github') #noqa
+print(sys.path)
 from GDHelperFunctions import MSE, MSEGradient
 from LinearRegression import LinearRegression
 import numpy as np
-
 
 
 X = np.array([0, 1, 3, 4]).reshape(4, 1)

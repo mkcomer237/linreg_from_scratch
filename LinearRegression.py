@@ -23,9 +23,7 @@ class LinearRegression():
 
         if prepend_ones:
             ones = np.ones((self.n, 1))
-            print(ones)
             self.X = np.concatenate((ones, self.X), axis=1)
-            print(self.X)
     
     def train(self):
         """Train using the normal equations and inverse.
@@ -56,7 +54,7 @@ class LinearRegression():
         d_b_hat: derivative of the loss function wrt b_hat (includes intercept)
         MSE and Gradient calcutaions are handled in the separate helper file.
         The algorithm will raise an exception if MSE is not converging.
-        """
+        """ 
         # Initialize with a set of ones
         self.b_hat = np.ones((self.X.shape[1], 1))
 
