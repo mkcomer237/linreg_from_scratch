@@ -1,5 +1,6 @@
-*.pyc
 __pycache__/
 Scratchpad.ipynb
 tests/test_loss.py
 .DS_Store
+.ipynb_checkpoints
+*.pyc
