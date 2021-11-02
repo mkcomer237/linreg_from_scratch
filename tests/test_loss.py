@@ -2,7 +2,6 @@
 
 import sys
 sys.path.append('/Users/maxcomer/Dropbox/Python Deep Learning/linear_regression/linear_regression_github') #noqa
-print(sys.path)
 from GDHelperFunctions import MSE, MSEGradient
 from LinearRegression import LinearRegression
 import numpy as np
