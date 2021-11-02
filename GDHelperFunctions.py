@@ -5,6 +5,7 @@ import numpy as np
 import warnings
 warnings.filterwarnings("error")
 
+
 def MSE(X, y, b_hat):
     """Return y_hat and mean squared error in a tuple."""
     y_hat = X @ b_hat
@@ -15,7 +16,13 @@ def MSE(X, y, b_hat):
         raise Exception(f'Convergence error, latest e: {e[0]}')
     return (y_hat, mse)
 
+
 def MSEGradient(X, y, y_hat):
     """Find the array of derivatives for MSE wrt b_hat."""
     e = y - y_hat
     return -2*(X.T @ e)/len(y)
+
+
+def Standardize(X):
+    """Standardize the X values."""
+    return (X-np.mean(X, axis=0))/np.var(X, axis=0)
