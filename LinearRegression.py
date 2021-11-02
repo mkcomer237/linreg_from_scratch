@@ -63,7 +63,6 @@ class LinearRegression():
         MSE and Gradient calcutaions are handled in the separate helper file.
         The algorithm will raise an exception if MSE is not converging.
         """
-
         self.b_hat = np.zeros((self.X.shape[1], 1))
         # self.b_hat = np.random.randn(self.X.shape[1], 1)
 
