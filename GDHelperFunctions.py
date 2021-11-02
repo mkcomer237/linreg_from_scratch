@@ -25,4 +25,4 @@ def MSEGradient(X, y, y_hat):
 
 def Standardize(X):
     """Standardize the X values."""
-    return (X-np.mean(X, axis=0))/np.var(X, axis=0)
+    return (X-np.mean(X, axis=0))/np.std(X, axis=0)
